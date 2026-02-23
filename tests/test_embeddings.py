@@ -26,7 +26,7 @@ def mock_embedding_vector():
 
 class TestEmbeddingsService:
     """Tests for EmbeddingsService class."""
-    def test_get_embeddings_instance_returns_instance(self, mock_settings):
+   def test_get_embeddings_instance_returns_instance(self, mock_settings):
         """Returns OpenAIEmbeddings instance."""
         service = EmbeddingsService(settings=mock_settings)
         embeddings = service.get_embeddings_instance()
@@ -47,4 +47,3 @@ class TestEmbeddingsService:
 
         assert embeddings.openai_api_key.get_secret_value() == "test-api-key"
 
-    
