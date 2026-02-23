@@ -22,6 +22,7 @@ class EmbeddingsService:
             model=self._settings.embedding_model,
             openai_api_key=self._settings.openai_api_key,
         )
+    
     def get_embeddings_instance(self) -> OpenAIEmbeddings:
         """
         Get the underlying OpenAIEmbeddings instance.
