@@ -23,30 +23,6 @@ class EmbeddingsService:
             openai_api_key=self._settings.openai_api_key,
         )
 
-    def embed_text(self, text: str) -> List[float]:
-        """
-        Embed a single text string.
-
-        Args:
-            text: The text to embed.
-
-        Returns:
-            List of floats representing the embedding vector.
-        """
-        return self._embeddings.embed_query(text)
-
-    def embed_texts(self, texts: List[str]) -> List[List[float]]:
-        """
-        Embed multiple texts in a batch.
-
-        Args:
-            texts: List of texts to embed.
-
-        Returns:
-            List of embedding vectors, one for each input text.
-        """
-        return self._embeddings.embed_documents(texts)
-
     def get_embeddings_instance(self) -> OpenAIEmbeddings:
         """
         Get the underlying OpenAIEmbeddings instance.
