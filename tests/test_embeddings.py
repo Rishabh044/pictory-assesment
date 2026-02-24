@@ -1,7 +1,5 @@
 """Tests for the embeddings service."""
 
-from unittest.mock import MagicMock, patch
-
 import pytest
 from langchain_openai import OpenAIEmbeddings
 
@@ -16,13 +14,6 @@ def mock_settings():
         openai_api_key="test-api-key",
         embedding_model="text-embedding-3-small",
     )
-
-
-@pytest.fixture
-def mock_embedding_vector():
-    """Create a mock embedding vector with 1536 dimensions."""
-    return [0.1] * 1536
-
 
 class TestEmbeddingsService:
     """Tests for EmbeddingsService class."""
@@ -46,5 +37,3 @@ class TestEmbeddingsService:
         embeddings = service.get_embeddings_instance()
 
         assert embeddings.openai_api_key.get_secret_value() == "test-api-key"
-
-    
