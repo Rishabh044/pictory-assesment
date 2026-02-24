@@ -17,7 +17,7 @@ def mock_settings():
 
 class TestEmbeddingsService:
     """Tests for EmbeddingsService class."""
-    def test_get_embeddings_instance_returns_instance(self, mock_settings):
+   def test_get_embeddings_instance_returns_instance(self, mock_settings):
         """Returns OpenAIEmbeddings instance."""
         service = EmbeddingsService(settings=mock_settings)
         embeddings = service.get_embeddings_instance()

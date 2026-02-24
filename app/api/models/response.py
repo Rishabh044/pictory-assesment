@@ -21,7 +21,6 @@ class IngestResponse(BaseModel):
     time_elapsed_seconds: float
     details: Union[List[DocumentDetail], str]
 
-
 class SentenceMatch(BaseModel):
     """A single sentence result in a search response."""
 
