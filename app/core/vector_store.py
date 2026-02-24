@@ -30,6 +30,7 @@ class VectorStoreManager:
             collection_name="sentence_embeddings",
             embedding_function=self._embeddings_service.get_embeddings_instance(),
             persist_directory=self._settings.chroma_persist_directory,
+            collection_metadata={"hnsw:space": "cosine"},
         )
 
     def add_documents(self, documents: List[Document]) -> int:

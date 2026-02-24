@@ -20,3 +20,21 @@ class IngestResponse(BaseModel):
     sentences_indexed: int
     time_elapsed_seconds: float
     details: Union[List[DocumentDetail], str]
+
+
+class SentenceMatch(BaseModel):
+    """A single sentence result in a search response."""
+
+    sentence_id: str
+    sentence_text: str
+    document_id: str
+    sentence_index: int
+    score: float
+
+
+class SearchResponse(BaseModel):
+    """Response body for POST /api/v1/search."""
+
+    query: str
+    top_matches: List[SentenceMatch]
+    time_elapsed_seconds: float
