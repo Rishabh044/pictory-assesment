@@ -15,15 +15,9 @@ def mock_settings():
         embedding_model="text-embedding-3-small",
     )
 
-
 class TestEmbeddingsService:
     """Tests for EmbeddingsService class."""
-<<<<<<< HEAD
-   def test_get_embeddings_instance_returns_instance(self, mock_settings):
-=======
-
     def test_get_embeddings_instance_returns_instance(self, mock_settings):
->>>>>>> 6f11c80 (Add ingest endpoint)
         """Returns OpenAIEmbeddings instance."""
         service = EmbeddingsService(settings=mock_settings)
         embeddings = service.get_embeddings_instance()
@@ -43,7 +37,3 @@ class TestEmbeddingsService:
         embeddings = service.get_embeddings_instance()
 
         assert embeddings.openai_api_key.get_secret_value() == "test-api-key"
-<<<<<<< HEAD
-
-=======
->>>>>>> 6f11c80 (Add ingest endpoint)
