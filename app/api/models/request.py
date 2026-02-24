@@ -12,13 +12,10 @@ class IngestRequest(BaseModel):
         examples=["./data/documents/sample.pdf"],
     )
 
-<<<<<<< HEAD
-
 class SearchRequest(BaseModel):
     """Request body for POST /api/v1/search."""
 
     query: str = Field(..., description="Plain-text search query.")
     k: int = Field(default=5, ge=1, le=50, description="Results per search phase.")
 
-=======
->>>>>>> 2cb1d98 (Add ingest endpoint)
+

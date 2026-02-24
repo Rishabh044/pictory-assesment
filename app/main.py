@@ -4,10 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes.ingest import router as ingest_router
-<<<<<<< HEAD
 from app.api.routes.search import router as search_router
-=======
->>>>>>> 2cb1d98 (Add ingest endpoint)
 
 app = FastAPI(
     title="Semantic Sentence Search API",
@@ -24,10 +21,7 @@ app.add_middleware(
 )
 
 app.include_router(ingest_router, prefix="/api/v1")
-<<<<<<< HEAD
 app.include_router(search_router, prefix="/api/v1")
-=======
->>>>>>> 2cb1d98 (Add ingest endpoint)
 
 
 @app.get("/health", tags=["health"])
