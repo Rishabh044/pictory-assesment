@@ -1,7 +1,5 @@
 """Tests for the embeddings service."""
 
-from unittest.mock import MagicMock, patch
-
 import pytest
 from langchain_openai import OpenAIEmbeddings
 
@@ -18,15 +16,14 @@ def mock_settings():
     )
 
 
-@pytest.fixture
-def mock_embedding_vector():
-    """Create a mock embedding vector with 1536 dimensions."""
-    return [0.1] * 1536
-
-
 class TestEmbeddingsService:
     """Tests for EmbeddingsService class."""
+<<<<<<< HEAD
    def test_get_embeddings_instance_returns_instance(self, mock_settings):
+=======
+
+    def test_get_embeddings_instance_returns_instance(self, mock_settings):
+>>>>>>> 6f11c80 (Add ingest endpoint)
         """Returns OpenAIEmbeddings instance."""
         service = EmbeddingsService(settings=mock_settings)
         embeddings = service.get_embeddings_instance()
@@ -46,4 +43,7 @@ class TestEmbeddingsService:
         embeddings = service.get_embeddings_instance()
 
         assert embeddings.openai_api_key.get_secret_value() == "test-api-key"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6f11c80 (Add ingest endpoint)
