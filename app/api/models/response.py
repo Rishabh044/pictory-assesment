@@ -20,6 +20,7 @@ class IngestResponse(BaseModel):
     sentences_indexed: int
     time_elapsed_seconds: float
     details: Union[List[DocumentDetail], str]
+<<<<<<< HEAD
 
 
 class SentenceMatch(BaseModel):
@@ -38,3 +39,5 @@ class SearchResponse(BaseModel):
     query: str
     top_matches: List[SentenceMatch]
     time_elapsed_seconds: float
+=======
+>>>>>>> 2cb1d98 (Add ingest endpoint)
